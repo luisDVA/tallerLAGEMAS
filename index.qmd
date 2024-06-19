@@ -1,6 +1,7 @@
 ---
 title: "Taller - Introducción a R - \nLAGEMAS"
 date: today
+lang: es
 ---
 
 Laboratorio de Genómica y Ecología Molecular Antártica y Sub-Antártica
