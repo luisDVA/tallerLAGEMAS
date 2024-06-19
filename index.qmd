@@ -1,8 +1,14 @@
 ---
 title: "Taller - Introducción a R - \nLAGEMAS"
+date: today
 ---
 
-19/06/2024
+Laboratorio de Genómica y Ecología Molecular Antártica y Sub-Antártica
+
+--- 
+Imparte: Luis D. Verde Arregoitia
+
+
 
 ###  Presentación
 [Taller R LAGEMAS](presentaciones/miercoles19.qmd){.external target="_blank"}
