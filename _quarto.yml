@@ -1,8 +1,9 @@
 project:
   type: website
+  output-dir: docs
 
 website:
-  title: "tallerLAGEMAS"
+  title: "Taller R - LAGEMAS"
 
 
 format:
