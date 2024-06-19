@@ -883,7 +883,7 @@ Datos sobre tamaño corporal, frecuencia dominante, y hábitat de 176 especies d
 
 ## Mapas base
 
-- Leer cualquier archivo vectorial (shp)
+- Leer cualquier archivo vectorial (shapefile *.shp)
 
 - Cargar datos desde paquetes
 

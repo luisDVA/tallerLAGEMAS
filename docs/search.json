@@ -24,15 +24,15 @@
     "objectID": "presentaciones/miercoles19.html#temas-de-hoy",
     "href": "presentaciones/miercoles19.html#temas-de-hoy",
     "title": "Taller R - LAGEMAS",
-    "section": "",
-    "text": "Organización de proyectos\n\nObjetos\n\nPreparación de datos\nVisualización de datos\nDatos espaciales"
+    "section": "Temas de hoy",
+    "text": "Temas de hoy\n\nOrganización de proyectos\n\nObjetos\n\nPreparación de datos\nVisualización de datos\nDatos espaciales"
   },
   {
     "objectID": "presentaciones/miercoles19.html#qué-es",
     "href": "presentaciones/miercoles19.html#qué-es",
     "title": "Taller R - LAGEMAS",
     "section": "¿Qué es ?",
-    "text": "¿Qué es ?\n✍️Software\n. . .\n¿Dialecto de S?\n¿Paquete estadístico?\n¿RStudio?\n¿Lenguaje de programación?\n¿Dispositivo gráfico?"
+    "text": "¿Qué es ?\n✍️Software\n\n¿Dialecto de S?\n¿Paquete estadístico?\n¿RStudio?\n¿Lenguaje de programación?\n¿Dispositivo gráfico?"
   },
   {
     "objectID": "presentaciones/miercoles19.html#section",
@@ -102,7 +102,7 @@
     "href": "presentaciones/miercoles19.html#reiniciar-r",
     "title": "Taller R - LAGEMAS",
     "section": "Reiniciar R",
-    "text": "Reiniciar R\n\nCtrl+Shift+F10\n(Windows y Linux)\n\n\nCommand+Shift+F10\n(Mac)"
+    "text": "Reiniciar R\nCtrl+Shift+F10\n(Windows y Linux)\nCommand+Shift+F10\n(Mac)"
   },
   {
     "objectID": "presentaciones/miercoles19.html#principios-de-programación-en-r",
@@ -123,7 +123,7 @@
     "href": "presentaciones/miercoles19.html#section-2",
     "title": "Taller R - LAGEMAS",
     "section": "",
-    "text": "Vectores\n\n\n\nListas\n\n\n\n\nTablas"
+    "text": "Vectores\n\nListas\n\n\nTablas"
   },
   {
     "objectID": "presentaciones/miercoles19.html#vectores-1",
@@ -172,7 +172,7 @@
     "href": "presentaciones/miercoles19.html#dos-o-más-vectores-del-mismo-largo",
     "title": "Taller R - LAGEMAS",
     "section": "Dos o más vectores del mismo largo…",
-    "text": "Dos o más vectores del mismo largo…\n\n\n\n\n\n\n¡Data frame!\n\nObjeto tabular con filas y columnas\nPuede almacenar objetos de distintas clases en las columnas\nNombres para cada columna"
+    "text": "Dos o más vectores del mismo largo…\n\n\n\n\n\n¡Data frame!\n\nObjeto tabular con filas y columnas\nPuede almacenar objetos de distintas clases en las columnas\nNombres para cada columna"
   },
   {
     "objectID": "presentaciones/miercoles19.html#data-frames",
@@ -235,7 +235,7 @@
     "href": "presentaciones/miercoles19.html#pipes-1",
     "title": "Taller R - LAGEMAS",
     "section": "Pipes",
-    "text": "Pipes\n\nReducen la necesidad de guardar resultados intermedios o de anidar código\nCódigo más fácil de leer\nMás fácil quitar o agregar pasos a la secuencia\n\n\nInsertamos con ctrl + shift + M\n\n\n\nAdolfo Álvarez (2021)\nThe (updated) history of the pipe operator in R\n\n\n\n\n\n\nlibrary(magrittr)\nnotas %&gt;% \n  mean() %&gt;% \n  round(digits=2)\n\n[1] 7.78\n\n\n\n\n\n\nLHS |&gt; RHS(argument = 12)\nse convierte en\nRHS(LHS, argument = 12)"
+    "text": "Pipes\n\nReducen la necesidad de guardar resultados intermedios o de anidar código\nCódigo más fácil de leer\nMás fácil quitar o agregar pasos a la secuencia\n\n\nInsertamos con ctrl + shift + M\n\n\n\nAdolfo Álvarez (2021)\nThe (updated) history of the pipe operator in R"
   },
   {
     "objectID": "presentaciones/miercoles19.html#funciones-útiles-de-dplyr",
@@ -256,28 +256,28 @@
     "href": "presentaciones/miercoles19.html#select",
     "title": "Taller R - LAGEMAS",
     "section": "select()",
-    "text": "select()\n\n\n\nSeleccionar columnas\n\npor nombre\n\npor posición\n\npor tipo\n\n\n\n\n\n\npaises_m %&gt;% \n  select(pais,\n         amenazadas) %&gt;% \n  head(4)\n\n# A tibble: 4 × 2\n  pais      amenazadas\n  &lt;chr&gt;          &lt;int&gt;\n1 Indonesia        191\n2 Brasil            80\n3 China             73\n4 Mexico            96"
+    "text": "select()\n\n\nSeleccionar columnas\n\npor nombre\n\npor posición\n\npor tipo\n\n\n\n\n\npaises_m %&gt;% \n  select(pais,\n         amenazadas) %&gt;% \n  head(4)\n\n# A tibble: 4 × 2\n  pais      amenazadas\n  &lt;chr&gt;          &lt;int&gt;\n1 Indonesia        191\n2 Brasil            80\n3 China             73\n4 Mexico            96"
   },
   {
     "objectID": "presentaciones/miercoles19.html#mutate",
     "href": "presentaciones/miercoles19.html#mutate",
     "title": "Taller R - LAGEMAS",
     "section": "mutate()",
-    "text": "mutate()\n\n\n\nCrea o modifica columnas\n\nCrear nuevas\n\n‘sobre-escribir’ existentes\n\n\n\n\n\npaises_m %&gt;%\n  select(pais, amenazadas) %&gt;% \n  mutate(amenazadas_log = log(amenazadas)) %&gt;% \n  head(5)\n\n# A tibble: 5 × 3\n  pais      amenazadas amenazadas_log\n  &lt;chr&gt;          &lt;int&gt;          &lt;dbl&gt;\n1 Indonesia        191           5.25\n2 Brasil            80           4.38\n3 China             73           4.29\n4 Mexico            96           4.56\n5 Peru              53           3.97"
+    "text": "mutate()\n\n\nCrea o modifica columnas\n\nCrear nuevas\n\n‘sobre-escribir’ existentes\n\n\n\n\npaises_m %&gt;%\n  select(pais, amenazadas) %&gt;% \n  mutate(amenazadas_log = log(amenazadas)) %&gt;% \n  head(5)\n\n# A tibble: 5 × 3\n  pais      amenazadas amenazadas_log\n  &lt;chr&gt;          &lt;int&gt;          &lt;dbl&gt;\n1 Indonesia        191           5.25\n2 Brasil            80           4.38\n3 China             73           4.29\n4 Mexico            96           4.56\n5 Peru              53           3.97"
   },
   {
     "objectID": "presentaciones/miercoles19.html#filter",
     "href": "presentaciones/miercoles19.html#filter",
     "title": "Taller R - LAGEMAS",
     "section": "filter()",
-    "text": "filter()\n\nSeleccionar filas\nRetiene solamente las filas que cumplen una condición\n\n\npaises_m %&gt;% \n  select(pais, especies, amenazadas) %&gt;% \n  filter(amenazadas &gt; 75)\n\n# A tibble: 4 × 3\n  pais      especies amenazadas\n  &lt;chr&gt;        &lt;int&gt;      &lt;int&gt;\n1 Indonesia      670        191\n2 Brasil         648         80\n3 Mexico         523         96\n4 India          412         93"
+    "text": "filter()\nSeleccionar filas\nRetiene solamente las filas que cumplen una condición\n\n\npaises_m %&gt;% \n  select(pais, especies, amenazadas) %&gt;% \n  filter(amenazadas &gt; 75)\n\n# A tibble: 4 × 3\n  pais      especies amenazadas\n  &lt;chr&gt;        &lt;int&gt;      &lt;int&gt;\n1 Indonesia      670        191\n2 Brasil         648         80\n3 Mexico         523         96\n4 India          412         93"
   },
   {
     "objectID": "presentaciones/miercoles19.html#rename",
     "href": "presentaciones/miercoles19.html#rename",
     "title": "Taller R - LAGEMAS",
     "section": "rename()",
-    "text": "rename()\n\nCambiar nombres de columnas\nNombre nuevo primero luego variable objetivo\n\n\npaises_m %&gt;% \n  rename(country=pais,\n         species=especies, threatened=amenazadas) %&gt;% \n  head(3)\n\n# A tibble: 3 × 4\n  country   species threatened region \n  &lt;chr&gt;       &lt;int&gt;      &lt;int&gt; &lt;chr&gt;  \n1 Indonesia     670        191 Asia   \n2 Brasil        648         80 America\n3 China         551         73 Asia"
+    "text": "rename()\nCambiar nombres de columnas\nNombre nuevo primero luego variable objetivo\n\n\npaises_m %&gt;% \n  rename(country=pais,\n         species=especies, threatened=amenazadas) %&gt;% \n  head(3)\n\n# A tibble: 3 × 4\n  country   species threatened region \n  &lt;chr&gt;       &lt;int&gt;      &lt;int&gt; &lt;chr&gt;  \n1 Indonesia     670        191 Asia   \n2 Brasil        648         80 America\n3 China         551         73 Asia"
   },
   {
     "objectID": "presentaciones/miercoles19.html#ejercicio-littorinidae",
@@ -298,14 +298,14 @@
     "href": "presentaciones/miercoles19.html#gramática-de-gráficos",
     "title": "Taller R - LAGEMAS",
     "section": "Gramática de gráficos",
-    "text": "Gramática de gráficos\n\n\n\nModificado de Wickham (2007)"
+    "text": "Gramática de gráficos\n\nModificado de Wickham (2007)"
   },
   {
     "objectID": "presentaciones/miercoles19.html#section-7",
     "href": "presentaciones/miercoles19.html#section-7",
     "title": "Taller R - LAGEMAS",
     "section": "",
-    "text": "ggplot(data, aes(x,y)) +\n  geom_point()\n\n\n  ggplot() crea el gráfico\naes() determina los vínculos entre las variables y las propiedades del gráfico\ngeom_* define la capa con la representación visual de los datos\n\n\nlagartijasDatos\n\n\n\n\n\n\n\n\n\n\nlargo\npeso\nedad\n\n\n\n\n9\n20\nadulto\n\n\n8\n13\njuvenil\n\n\n7\n15\njuvenil\n\n\n13\n18\nadulto\n\n\n11\n21\nadulto\n\n\n6\n14\njuvenil\n\n\n\n\n\n\n\n\n\n\nlagartijas &lt;- \ntibble::tribble(\n  ~largo, ~peso,     ~edad,\n      9L,   20L,  \"adulto\",\n      8L,   13L, \"juvenil\",\n      7L,   15L, \"juvenil\",\n     13L,   18L,  \"adulto\",\n     11L,   21L,  \"adulto\",\n      6L,   14L, \"juvenil\"\n  )\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nlargo\npeso\nedad\n\n\n\n\n9\n20\nadulto\n\n\n8\n13\njuvenil\n\n\n7\n15\njuvenil\n\n\n13\n18\nadulto\n\n\n11\n21\nadulto\n\n\n6\n14\njuvenil\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nx\ny\nfigura\n\n\n\n\n9\n20\ncírculo\n\n\n8\n13\ntriángulo\n\n\n7\n15\ntriángulo\n\n\n13\n18\ncírculo\n\n\n11\n21\ncírculo\n\n\n6\n14\ntriángulo"
+    "text": "ggplot(data, aes(x,y)) +\n  geom_point()\n\n\n  ggplot() crea el gráfico\naes() determina los vínculos entre las variables y las propiedades del gráfico\ngeom_* define la capa con la representación visual de los datos"
   },
   {
     "objectID": "presentaciones/miercoles19.html#section-8",
@@ -319,7 +319,7 @@
     "href": "presentaciones/miercoles19.html#ejercicio-2",
     "title": "Taller R - LAGEMAS",
     "section": "Ejercicio",
-    "text": "Ejercicio\nranas.csv\n01_armar-plots.R\n\n\n\n\n\n\n\nDatos sobre tamaño corporal, frecuencia dominante, y hábitat de 176 especies de ranas, tomados de Muñoz et al. (2020)"
+    "text": "Ejercicio\nranas.csv\n01_armar-plots.R\n\n\n\n\nDatos sobre tamaño corporal, frecuencia dominante, y hábitat de 176 especies de ranas, tomados de Muñoz et al. (2020)"
   },
   {
     "objectID": "presentaciones/miercoles19.html#paquete-sf",
@@ -333,14 +333,14 @@
     "href": "presentaciones/miercoles19.html#mapas-base",
     "title": "Taller R - LAGEMAS",
     "section": "Mapas base",
-    "text": "Mapas base\n\nLeer cualquier archivo vectorial (shp)\nCargar datos desde paquetes"
+    "text": "Mapas base\n\nLeer cualquier archivo vectorial (shapefile *.shp)\nCargar datos desde paquetes"
   },
   {
     "objectID": "presentaciones/miercoles19.html#rnaturalearth",
     "href": "presentaciones/miercoles19.html#rnaturalearth",
     "title": "Taller R - LAGEMAS",
     "section": "rnaturalearth",
-    "text": "rnaturalearth\n\nDatos de países, estados, etc.\nFunción ne_countries y pedir salida en formato simple features\n\n\nlibrary(rnaturalearth)\nchl &lt;- ne_countries(country = \"Chile\", returnclass = \"sf\")"
+    "text": "rnaturalearth\n\nDatos de países, estados, etc.\nFunción ne_countries y pedir salida en formato simple features\n\n\nlibrary(rnaturalearth)\nchl &lt;- ne_countries(country = \"Chile\", returnclass = \"sf\")\nplot(chl)"
   },
   {
     "objectID": "presentaciones/miercoles19.html#objetos-sf",
