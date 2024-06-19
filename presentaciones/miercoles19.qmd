@@ -51,6 +51,25 @@ library(ggplot2)
 * Visualización de datos
 * Datos espaciales
 
+## Instalar para las actividades:
+
+:::{.big-code}
+
+```{r}
+#| eval: false
+
+install.packages("rnaturalearth")
+install.packages("dplyr")
+install.packages("readr")
+install.packages("sf")
+install.packages("ggplot2")
+
+```
+
+:::
+
+
+
 ## ¿Qué es `r fontawesome::fa(name = "r-project")`?
 
 ✍️Software

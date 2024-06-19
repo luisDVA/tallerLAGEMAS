@@ -355,5 +355,12 @@
     "title": "Taller R - LAGEMAS",
     "section": "Ejercicio",
     "text": "Ejercicio\n\nImportar archivo ‘littorinidae.csv’\nFiltar datos para un solo género y un solo país (o por latitud/longitud)\nGraficar los puntos de ocurrencia en un mapa"
+  },
+  {
+    "objectID": "presentaciones/miercoles19.html#instalar-para-las-actividades",
+    "href": "presentaciones/miercoles19.html#instalar-para-las-actividades",
+    "title": "Taller R - LAGEMAS",
+    "section": "Instalar para las actividades:",
+    "text": "Instalar para las actividades:\n\n\ninstall.packages(\"rnaturalearth\")\ninstall.packages(\"dplyr\")\ninstall.packages(\"readr\")\ninstall.packages(\"sf\")\ninstall.packages(\"ggplot2\")"
   }
 ]
