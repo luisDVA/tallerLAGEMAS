@@ -1,0 +1,359 @@
+[
+  {
+    "objectID": "presentaciones/miercoles19.html#temas-de-hoy",
+    "href": "presentaciones/miercoles19.html#temas-de-hoy",
+    "title": "Taller R - LAGEMAS",
+    "section": "Temas de hoy",
+    "text": "Temas de hoy\n\nOrganización de proyectos\n\nObjetos\n\nPreparación de datos\nVisualización de datos\nDatos espaciales"
+  },
+  {
+    "objectID": "presentaciones/miercoles19.html#qué-es",
+    "href": "presentaciones/miercoles19.html#qué-es",
+    "title": "Taller R - LAGEMAS",
+    "section": "¿Qué es ?",
+    "text": "¿Qué es ?\n✍️Software\n\n¿Dialecto de S?\n¿Paquete estadístico?\n¿RStudio?\n¿Lenguaje de programación?\n¿Dispositivo gráfico?"
+  },
+  {
+    "objectID": "presentaciones/miercoles19.html#section",
+    "href": "presentaciones/miercoles19.html#section",
+    "title": "Taller R - LAGEMAS",
+    "section": "?",
+    "text": "?\n\n\n✍️🧑‍🎓Ventajas\n\n✍️🧑‍🎓Desventajas"
+  },
+  {
+    "objectID": "presentaciones/miercoles19.html#no-es-rstudio",
+    "href": "presentaciones/miercoles19.html#no-es-rstudio",
+    "title": "Taller R - LAGEMAS",
+    "section": " no es RStudio",
+    "text": "no es RStudio\nIDE - Entorno de desarrollo integrado\nHerramientas para facilitar el uso de un lenguaje de programación\n\nEditor de texto que ‘reconoce’ la sintaxis de un lenguaje\nAtajos y herramientas para administrar y ejecutar código"
+  },
+  {
+    "objectID": "presentaciones/miercoles19.html#paquetes",
+    "href": "presentaciones/miercoles19.html#paquetes",
+    "title": "Taller R - LAGEMAS",
+    "section": "📦 Paquetes",
+    "text": "📦 Paquetes\n\n\nAl instalar R instalamos:\nbase: las funciones fundamentales de R\n\nlist()\nlog()\ncat() rm() etc…"
+  },
+  {
+    "objectID": "presentaciones/miercoles19.html#paquetes-1",
+    "href": "presentaciones/miercoles19.html#paquetes-1",
+    "title": "Taller R - LAGEMAS",
+    "section": "📦 Paquetes",
+    "text": "📦 Paquetes\nOtros componentes de R-base:\nutils, stats, datasets, graphics, grDevices, grid, methods, tools, parallel, compiler, splines, tcltk, stats4\nPaquetes ‘recomendados’ (se instalan con R pero no se cargan automáticamente)\nboot, class, cluster, codetools, foreign, KernSmooth, lattice, mgcv, nlme, rpart, survival, MASS, spatial, nnet, Matrix"
+  },
+  {
+    "objectID": "presentaciones/miercoles19.html#paquetes-adicionales",
+    "href": "presentaciones/miercoles19.html#paquetes-adicionales",
+    "title": "Taller R - LAGEMAS",
+    "section": "📦 Paquetes Adicionales",
+    "text": "📦 Paquetes Adicionales\n\n&gt;20,900 en CRAN (The Comprehensive R Archive Network)\nmuchos más en GitHub, GitLab, Bitbucket, Bioconductor, etc.\n\nSe instalan desde R con:\ninstall.packages() para paquetes de CRAN\nremotes o pak para todos los demás repositorios"
+  },
+  {
+    "objectID": "presentaciones/miercoles19.html#proyectos-en-rstudio",
+    "href": "presentaciones/miercoles19.html#proyectos-en-rstudio",
+    "title": "Taller R - LAGEMAS",
+    "section": "Proyectos en RStudio",
+    "text": "Proyectos en RStudio\n\n\n\n\n\nInstancia de R dedicada\nNavegador apuntando al directorio del proyecto\n\nbotón para regresar al dir. del proyecto\n\nDir. de proyecto establecido como Dir. de Trabajo\n\nrutas relativas al Dir. de Proyecto"
+  },
+  {
+    "objectID": "presentaciones/miercoles19.html#ejercicio",
+    "href": "presentaciones/miercoles19.html#ejercicio",
+    "title": "Taller R - LAGEMAS",
+    "section": "Ejercicio",
+    "text": "Ejercicio\nCrear un proyecto para el curso en RStudio\n\n\nen alguna ubicación fácil de encontrar (ej. Escritorio)\n“taller-R-lab” como nombre\n\n\nLos proyectos en OneDrive pueden no funcionar correctamente"
+  },
+  {
+    "objectID": "presentaciones/miercoles19.html#guardar-la-fuente-y-no-el-entorno",
+    "href": "presentaciones/miercoles19.html#guardar-la-fuente-y-no-el-entorno",
+    "title": "Taller R - LAGEMAS",
+    "section": "Guardar la fuente y no el entorno",
+    "text": "Guardar la fuente y no el entorno\n\n\n\n\n\nExportar figuras y resultados a archivos\nEvitar rm(list = ls()).\n‘Hoja en blanco’ & reiniciar R seguido\n\n\n\nJenny Bryan & Jim Hester (2020)\nWhat they forgot to teach you about R\nJenny Bryan (2018)\nZen And The aRt Of Workflow Maintenance"
+  },
+  {
+    "objectID": "presentaciones/miercoles19.html#hoja-en-blanco-blank-slate",
+    "href": "presentaciones/miercoles19.html#hoja-en-blanco-blank-slate",
+    "title": "Taller R - LAGEMAS",
+    "section": "Hoja en blanco (blank slate)",
+    "text": "Hoja en blanco (blank slate)\n\n\nNo se guarda el espacio de trabajo a un archivo .Rdata\nNo se carga el espacio de trabajo desde un archivo .Rdata al arrancar R"
+  },
+  {
+    "objectID": "presentaciones/miercoles19.html#reiniciar-r",
+    "href": "presentaciones/miercoles19.html#reiniciar-r",
+    "title": "Taller R - LAGEMAS",
+    "section": "Reiniciar R",
+    "text": "Reiniciar R\nCtrl+Shift+F10\n(Windows y Linux)\nCommand+Shift+F10\n(Mac)"
+  },
+  {
+    "objectID": "presentaciones/miercoles19.html#principios-de-programación-en-r",
+    "href": "presentaciones/miercoles19.html#principios-de-programación-en-r",
+    "title": "Taller R - LAGEMAS",
+    "section": "Principios de programación en R",
+    "text": "Principios de programación en R\n\nTodo lo que existe es un objeto\nTodo lo que ocurre lo hace una función\n(Las funciones son objetos)\nLas funciones (generalmente) viven en paquetes"
+  },
+  {
+    "objectID": "presentaciones/miercoles19.html#objetos",
+    "href": "presentaciones/miercoles19.html#objetos",
+    "title": "Taller R - LAGEMAS",
+    "section": "Objetos",
+    "text": "Objetos\n\nTablas con filas y columnas\nModelos\nListas\nGráficos\n\n\nTodos los objetos tienen clases y atributos y hay distintas formas de crearlos"
+  },
+  {
+    "objectID": "presentaciones/miercoles19.html#section-2",
+    "href": "presentaciones/miercoles19.html#section-2",
+    "title": "Taller R - LAGEMAS",
+    "section": "",
+    "text": "Vectores\n\nListas\n\n\nTablas"
+  },
+  {
+    "objectID": "presentaciones/miercoles19.html#vectores-1",
+    "href": "presentaciones/miercoles19.html#vectores-1",
+    "title": "Taller R - LAGEMAS",
+    "section": "Vectores",
+    "text": "Vectores\nNúmeros\n\n\nc(1,2,3,4)\n\n[1] 1 2 3 4\n\n\n\n\n\n\nc(22.1,0.006,4.1)\n\n[1] 22.100  0.006  4.100"
+  },
+  {
+    "objectID": "presentaciones/miercoles19.html#vectores-2",
+    "href": "presentaciones/miercoles19.html#vectores-2",
+    "title": "Taller R - LAGEMAS",
+    "section": "Vectores",
+    "text": "Vectores\nCaracteres\n\n\nc(\"perro\",\"gato\",\"rata\",\"B\")\n\n[1] \"perro\" \"gato\"  \"rata\"  \"B\""
+  },
+  {
+    "objectID": "presentaciones/miercoles19.html#vectores-3",
+    "href": "presentaciones/miercoles19.html#vectores-3",
+    "title": "Taller R - LAGEMAS",
+    "section": "Vectores",
+    "text": "Vectores\nLógicos (verdadero/falso)\n\n\nc(TRUE,FALSE,FALSE,FALSE,TRUE)\n\n[1]  TRUE FALSE FALSE FALSE  TRUE"
+  },
+  {
+    "objectID": "presentaciones/miercoles19.html#creando-objetos",
+    "href": "presentaciones/miercoles19.html#creando-objetos",
+    "title": "Taller R - LAGEMAS",
+    "section": "Creando objetos",
+    "text": "Creando objetos\n\n\nx &lt;- c(1, 2, 3)\n\n\nFunción c() para juntar elementos en un vector\n\n\nx &lt;- c(1,2,3)\ny &lt;- c(\"a\",\"G\",\"h\")\n\n\n\n\nx\n\n[1] 1 2 3\n\ny\n\n[1] \"a\" \"G\" \"h\""
+  },
+  {
+    "objectID": "presentaciones/miercoles19.html#los-objetos-tienen-clases",
+    "href": "presentaciones/miercoles19.html#los-objetos-tienen-clases",
+    "title": "Taller R - LAGEMAS",
+    "section": "Los objetos tienen clases",
+    "text": "Los objetos tienen clases\n\n\nclass(x)\n\n[1] \"numeric\"\n\nclass(y)\n\n[1] \"character\""
+  },
+  {
+    "objectID": "presentaciones/miercoles19.html#los-vectores-solo-pueden-tener-objetos-de-la-misma-clase",
+    "href": "presentaciones/miercoles19.html#los-vectores-solo-pueden-tener-objetos-de-la-misma-clase",
+    "title": "Taller R - LAGEMAS",
+    "section": "Los vectores solo pueden tener objetos de la misma clase",
+    "text": "Los vectores solo pueden tener objetos de la misma clase\n\n\nc(1,\"a\",2)\n\n[1] \"1\" \"a\" \"2\"\n\n\n\nAl combinar caracteres y números hay conversión automática"
+  },
+  {
+    "objectID": "presentaciones/miercoles19.html#dos-o-más-vectores-del-mismo-largo",
+    "href": "presentaciones/miercoles19.html#dos-o-más-vectores-del-mismo-largo",
+    "title": "Taller R - LAGEMAS",
+    "section": "Dos o más vectores del mismo largo…",
+    "text": "Dos o más vectores del mismo largo…\n\n\n\n\n\n¡Data frame!\n\nObjeto tabular con filas y columnas\nPuede almacenar objetos de distintas clases en las columnas\nNombres para cada columna"
+  },
+  {
+    "objectID": "presentaciones/miercoles19.html#data-frames",
+    "href": "presentaciones/miercoles19.html#data-frames",
+    "title": "Taller R - LAGEMAS",
+    "section": "Data frames",
+    "text": "Data frames\nSe crean importando un archivo tabular o con data.frame()\n\n\nmi_tabla &lt;- \ndata.frame(id=c(\"rana\",\"pez\",\"nutria\",\"gusano\"),\n           ind_g=c(12,15,13,10),\n           listo=c(TRUE,TRUE,FALSE,TRUE))\n\n\n\ncada vector es una columna\nnombres de columnas sin comillas\nmismo largo para todos los vectores"
+  },
+  {
+    "objectID": "presentaciones/miercoles19.html#section-3",
+    "href": "presentaciones/miercoles19.html#section-3",
+    "title": "Taller R - LAGEMAS",
+    "section": "",
+    "text": "mi_tabla\n\n      id ind_g listo\n1   rana    12  TRUE\n2    pez    15  TRUE\n3 nutria    13 FALSE\n4 gusano    10  TRUE"
+  },
+  {
+    "objectID": "presentaciones/miercoles19.html#importando-archivos-tablas",
+    "href": "presentaciones/miercoles19.html#importando-archivos-tablas",
+    "title": "Taller R - LAGEMAS",
+    "section": "Importando archivos (tablas)",
+    "text": "Importando archivos (tablas)\n\nCon el botón “Import Dataset”\nCon alguna función read"
+  },
+  {
+    "objectID": "presentaciones/miercoles19.html#readr-y-readxl",
+    "href": "presentaciones/miercoles19.html#readr-y-readxl",
+    "title": "Taller R - LAGEMAS",
+    "section": "readr y readxl",
+    "text": "readr y readxl\nPaquetes adicionales para importar datos rectangulares desde archivos de texto y hojas de cálculo\n\nMenos errores al importar\nMayor flexibilidad al leer archivos\nLectura más rápida\nFunciones adicionales para limpiar los valores en las columnas"
+  },
+  {
+    "objectID": "presentaciones/miercoles19.html#ejercicio-1",
+    "href": "presentaciones/miercoles19.html#ejercicio-1",
+    "title": "Taller R - LAGEMAS",
+    "section": "Ejercicio",
+    "text": "Ejercicio\nImportar una tabla a R desde un archivo"
+  },
+  {
+    "objectID": "presentaciones/miercoles19.html#pipes",
+    "href": "presentaciones/miercoles19.html#pipes",
+    "title": "Taller R - LAGEMAS",
+    "section": "Pipes",
+    "text": "Pipes\n\n\n\nMano izquiera\n(LHS)\n\noperador ‘pipe’\n%&gt;%\nde 📦 magrittr\n|&gt; en R v &gt;= 4.1.0\n\nMano derecha\n(RHS)\n\n\n\n\nToma un objeto a la izquerda del operador y lo inserta como argumento en la función que esté a su derecha\n* Por defecto lo que esté a la izquierda del ‘pipe’ se inserta como el primer argumento de la función"
+  },
+  {
+    "objectID": "presentaciones/miercoles19.html#código-anidado",
+    "href": "presentaciones/miercoles19.html#código-anidado",
+    "title": "Taller R - LAGEMAS",
+    "section": "Código anidado",
+    "text": "Código anidado\n\n\n\nnotas &lt;- c(7,8,8,10,6,9,5,9,8)\n\nround(mean(notas), digits = 2)\n\n[1] 7.78"
+  },
+  {
+    "objectID": "presentaciones/miercoles19.html#pipes-1",
+    "href": "presentaciones/miercoles19.html#pipes-1",
+    "title": "Taller R - LAGEMAS",
+    "section": "Pipes",
+    "text": "Pipes\n\nReducen la necesidad de guardar resultados intermedios o de anidar código\nCódigo más fácil de leer\nMás fácil quitar o agregar pasos a la secuencia\n\n\nInsertamos con ctrl + shift + M\n\n\n\nAdolfo Álvarez (2021)\nThe (updated) history of the pipe operator in R"
+  },
+  {
+    "objectID": "presentaciones/miercoles19.html#pipes-2",
+    "href": "presentaciones/miercoles19.html#pipes-2",
+    "title": "Taller R - LAGEMAS",
+    "section": "Pipes",
+    "text": "Pipes\n\nReducen la necesidad de guardar resultados intermedios o de anidar código\nCódigo más fácil de leer\nMás fácil quitar o agregar pasos a la secuencia\n\n\nInsertamos con ctrl + shift + M\n\n\n\nAdolfo Álvarez (2021)\nThe (updated) history of the pipe operator in R"
+  },
+  {
+    "objectID": "presentaciones/miercoles19.html#funciones-útiles-de-dplyr",
+    "href": "presentaciones/miercoles19.html#funciones-útiles-de-dplyr",
+    "title": "Taller R - LAGEMAS",
+    "section": "Funciones útiles de 📦 dplyr",
+    "text": "Funciones útiles de 📦 dplyr\n\nFunciones separadas para las operaciones más comunes\nCada función solo hace una cosa pero la hace bien\n\n\n\nFunciones intuitivas para:\n\nCrear subconjuntos de filas y columnas\nCrear o modificar columnas"
+  },
+  {
+    "objectID": "presentaciones/miercoles19.html#section-4",
+    "href": "presentaciones/miercoles19.html#section-4",
+    "title": "Taller R - LAGEMAS",
+    "section": "",
+    "text": "Países megadiversosDatos\n\n\n\n\n\n\n\n\n\n\npais\nespecies\namenazadas\nregion\n\n\n\n\nIndonesia\n670\n191\nAsia\n\n\nBrasil\n648\n80\nAmerica\n\n\nChina\n551\n73\nAsia\n\n\nMexico\n523\n96\nAmerica\n\n\nPeru\n467\n53\nAmerica\n\n\nCongo\n430\n15\nAfrica\n\n\nIndia\n412\n93\nAsia\n\n\nKenya\n376\n30\nAfrica\n\n\nArgentina\n374\n38\nAmerica\n\n\nEcuador\n372\n47\nAmerica\n\n\nVenezuela\n363\n35\nAmerica\n\n\nTanzania\n359\n41\nAfrica\n\n\n\n\n\n\n\n\n\n\npaises_m &lt;- \ntibble::tribble(\n        ~pais, ~especies, ~amenazadas,   ~region,\n  \"Indonesia\",      670L,        191L,    \"Asia\",\n     \"Brasil\",      648L,         80L, \"America\",\n      \"China\",      551L,         73L,    \"Asia\",\n     \"Mexico\",      523L,         96L, \"America\",\n       \"Peru\",      467L,         53L, \"America\",\n      \"Congo\",      430L,         15L,  \"Africa\",\n      \"India\",      412L,         93L,    \"Asia\",\n      \"Kenya\",      376L,         30L,  \"Africa\",\n  \"Argentina\",      374L,         38L, \"America\",\n    \"Ecuador\",      372L,         47L, \"America\",\n  \"Venezuela\",      363L,         35L, \"America\",\n   \"Tanzania\",      359L,         41L,  \"Africa\"\n  )"
+  },
+  {
+    "objectID": "presentaciones/miercoles19.html#select",
+    "href": "presentaciones/miercoles19.html#select",
+    "title": "Taller R - LAGEMAS",
+    "section": "select()",
+    "text": "select()\n\n\nSeleccionar columnas\n\npor nombre\n\npor posición\n\npor tipo\n\n\n\n\n\npaises_m %&gt;% \n  select(pais,\n         amenazadas) %&gt;% \n  head(4)\n\n# A tibble: 4 × 2\n  pais      amenazadas\n  &lt;chr&gt;          &lt;int&gt;\n1 Indonesia        191\n2 Brasil            80\n3 China             73\n4 Mexico            96"
+  },
+  {
+    "objectID": "presentaciones/miercoles19.html#mutate",
+    "href": "presentaciones/miercoles19.html#mutate",
+    "title": "Taller R - LAGEMAS",
+    "section": "mutate()",
+    "text": "mutate()\n\n\nCrea o modifica columnas\n\nCrear nuevas\n\n‘sobre-escribir’ existentes\n\n\n\n\npaises_m %&gt;%\n  select(pais, amenazadas) %&gt;% \n  mutate(amenazadas_log = log(amenazadas)) %&gt;% \n  head(5)\n\n# A tibble: 5 × 3\n  pais      amenazadas amenazadas_log\n  &lt;chr&gt;          &lt;int&gt;          &lt;dbl&gt;\n1 Indonesia        191           5.25\n2 Brasil            80           4.38\n3 China             73           4.29\n4 Mexico            96           4.56\n5 Peru              53           3.97"
+  },
+  {
+    "objectID": "presentaciones/miercoles19.html#filter",
+    "href": "presentaciones/miercoles19.html#filter",
+    "title": "Taller R - LAGEMAS",
+    "section": "filter()",
+    "text": "filter()\nSeleccionar filas\nRetiene solamente las filas que cumplen una condición\n\n\npaises_m %&gt;% \n  select(pais, especies, amenazadas) %&gt;% \n  filter(amenazadas &gt; 75)\n\n# A tibble: 4 × 3\n  pais      especies amenazadas\n  &lt;chr&gt;        &lt;int&gt;      &lt;int&gt;\n1 Indonesia      670        191\n2 Brasil         648         80\n3 Mexico         523         96\n4 India          412         93"
+  },
+  {
+    "objectID": "presentaciones/miercoles19.html#rename",
+    "href": "presentaciones/miercoles19.html#rename",
+    "title": "Taller R - LAGEMAS",
+    "section": "rename()",
+    "text": "rename()\nCambiar nombres de columnas\nNombre nuevo primero luego variable objetivo\n\n\npaises_m %&gt;% \n  rename(country=pais,\n         species=especies, threatened=amenazadas) %&gt;% \n  head(3)\n\n# A tibble: 3 × 4\n  country   species threatened region \n  &lt;chr&gt;       &lt;int&gt;      &lt;int&gt; &lt;chr&gt;  \n1 Indonesia     670        191 Asia   \n2 Brasil        648         80 America\n3 China         551         73 Asia"
+  },
+  {
+    "objectID": "presentaciones/miercoles19.html#ejercicio-littorinidae",
+    "href": "presentaciones/miercoles19.html#ejercicio-littorinidae",
+    "title": "Taller R - LAGEMAS",
+    "section": "Ejercicio Littorinidae",
+    "text": "Ejercicio Littorinidae\n\nImportar el archivo “littorinidae.csv”\nDescartar columnas\nCrear subconjuntos taxonómicos o geográficos"
+  },
+  {
+    "objectID": "presentaciones/miercoles19.html#section-5",
+    "href": "presentaciones/miercoles19.html#section-5",
+    "title": "Taller R - LAGEMAS",
+    "section": "",
+    "text": "Una gramática puede ayudar a construir oraciones diferentes con una pequeña cantidad de verbos, sustantivos y adjetivos, en lugar de memorizar cada oración específica. Una pequeña cantidad de los componentes básicos de ggplot2 y de su gramática puede crear cientos de gráficos diferentes.\n\nIntroducción a la ciencia de datos\nRafael A. Irizarry (2020)"
+  },
+  {
+    "objectID": "presentaciones/miercoles19.html#gramática-de-gráficos",
+    "href": "presentaciones/miercoles19.html#gramática-de-gráficos",
+    "title": "Taller R - LAGEMAS",
+    "section": "Gramática de gráficos",
+    "text": "Gramática de gráficos\n\nModificado de Wickham (2007)"
+  },
+  {
+    "objectID": "presentaciones/miercoles19.html#section-7",
+    "href": "presentaciones/miercoles19.html#section-7",
+    "title": "Taller R - LAGEMAS",
+    "section": "",
+    "text": "ggplot(data, aes(x,y)) +\n  geom_point()\n\n\n  ggplot() crea el gráfico\naes() determina los vínculos entre las variables y las propiedades del gráfico\ngeom_* define la capa con la representación visual de los datos"
+  },
+  {
+    "objectID": "presentaciones/miercoles19.html#section-8",
+    "href": "presentaciones/miercoles19.html#section-8",
+    "title": "Taller R - LAGEMAS",
+    "section": "",
+    "text": "ggplot(data = lagartijas,     \n  aes(x = largo,y = peso))+\n  geom_point()"
+  },
+  {
+    "objectID": "presentaciones/miercoles19.html#ejercicio-2",
+    "href": "presentaciones/miercoles19.html#ejercicio-2",
+    "title": "Taller R - LAGEMAS",
+    "section": "Ejercicio",
+    "text": "Ejercicio\nranas.csv\n01_armar-plots.R\n\n\n\n\nDatos sobre tamaño corporal, frecuencia dominante, y hábitat de 176 especies de ranas, tomados de Muñoz et al. (2020)"
+  },
+  {
+    "objectID": "presentaciones/miercoles19.html#paquete-sf",
+    "href": "presentaciones/miercoles19.html#paquete-sf",
+    "title": "Taller R - LAGEMAS",
+    "section": "Paquete sf",
+    "text": "Paquete sf\n\n“Simple features for R”\nManejo espacial de puntos, líneas y polígonos\nMétodos propios para graficar (plot())\nCompatible con ggplot2"
+  },
+  {
+    "objectID": "presentaciones/miercoles19.html#mapas-base",
+    "href": "presentaciones/miercoles19.html#mapas-base",
+    "title": "Taller R - LAGEMAS",
+    "section": "Mapas base",
+    "text": "Mapas base\n\nLeer cualquier archivo vectorial (shp)\nCargar datos desde paquetes"
+  },
+  {
+    "objectID": "presentaciones/miercoles19.html#rnaturalearth",
+    "href": "presentaciones/miercoles19.html#rnaturalearth",
+    "title": "Taller R - LAGEMAS",
+    "section": "rnaturalearth",
+    "text": "rnaturalearth\n\nDatos de países, estados, etc.\nFunción ne_countries y pedir salida en formato simple features\n\n\nlibrary(rnaturalearth)\nchl &lt;- ne_countries(country = \"Chile\", returnclass = \"sf\")"
+  },
+  {
+    "objectID": "presentaciones/miercoles19.html#objetos-sf",
+    "href": "presentaciones/miercoles19.html#objetos-sf",
+    "title": "Taller R - LAGEMAS",
+    "section": "objetos sf",
+    "text": "objetos sf\n\nFunción st_read para importar archivos, o st_as_sf para asignar geometría\nArgumento coords para especificar las columnas con datos espaciales (long, lat)\nArgumento crs para especificar sistema de coordenadas"
+  },
+  {
+    "objectID": "presentaciones/miercoles19.html#ejercicio-3",
+    "href": "presentaciones/miercoles19.html#ejercicio-3",
+    "title": "Taller R - LAGEMAS",
+    "section": "Ejercicio",
+    "text": "Ejercicio\n\nImportar archivo ‘littorinidae.csv’\nFiltar datos para un solo género y un solo país (o por latitud/longitud)\nGraficar los puntos de ocurrencia en un mapa"
+  },
+  {
+    "objectID": "presentaciones/miercoles19.html#pipes-paips",
+    "href": "presentaciones/miercoles19.html#pipes-paips",
+    "title": "Taller R - LAGEMAS",
+    "section": "Pipes (\\paips)",
+    "text": "Pipes (\\paips)\nSi queremos hacer varias operaciones en secuencia:\n\n\nCódigo anidado (los resultados se evalúan de adentro hacia afuera)\nPipes (estructuramos operaciones seriadas de izquierda a derecha)"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Taller - Introducción a R - LAGEMAS",
+    "section": "",
+    "text": "19/06/2024\n\nPresentación\nTaller R LAGEMAS\n\n\nMateriales\n️Descargar datos"
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About",
+    "section": "",
+    "text": "About this site\n\n1 + 1\n\n[1] 2"
+  }
+]

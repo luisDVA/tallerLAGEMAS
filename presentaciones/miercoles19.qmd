@@ -1,0 +1,927 @@
+---
+title: "Taller R - LAGEMAS"
+author: Luis D. Verde Arregoitia
+format:
+  revealjs:
+    theme: curso_styles.scss
+    transition: fade
+    progress: true
+    preview-links: true
+    hide-inactive-cursor: true
+    highlight-style: printing
+    pause: true
+editor: source
+knitr:
+  opts_chunk:
+    dev: "ragg_png"
+    retina: 3
+    dpi: 200
+execute:
+  freeze: auto
+  cache: true
+  echo: true
+  fig-width: 5
+  fig-height: 6
+---
+
+```{r packages setup}
+#| echo: false
+
+library(fontawesome)
+
+```
+
+```{r setup}
+#| echo: false
+library(janitor)
+library(tidyr)
+library(stringr)
+library(dplyr)
+library(gt)
+library(ggplot2)
+```
+
+
+
+## Temas de hoy
+
+* Organización de proyectos  
+* Objetos  
+* Preparación de datos
+* Visualización de datos
+* Datos espaciales
+
+## ¿Qué es `r fontawesome::fa(name = "r-project")`?
+
+✍️Software
+
+. . .
+
+¿Dialecto de S?\
+¿Paquete estadístico?\
+¿RStudio?\
+¿Lenguaje de programación?\
+¿Dispositivo gráfico?
+
+## `r fontawesome::fa(name = "r-project")`?
+
+::: columns
+::: {.column width="50%"}
+✍️🧑‍🎓Ventajas
+:::
+
+::: {.column width="50%"}
+✍️🧑‍🎓Desventajas
+:::
+:::
+
+
+## `r fontawesome::fa(name = "r-project")` no es RStudio
+
+**IDE** - Entorno de desarrollo integrado
+
+Herramientas para facilitar el uso de un lenguaje de programación
+
+-   Editor de texto que 'reconoce' la sintaxis de un lenguaje
+
+-   Atajos y herramientas para administrar y ejecutar código
+
+
+## 📦 Paquetes
+\
+\
+Al instalar R instalamos:
+
+`base`: las funciones fundamentales de R
+\
+\
+`list()`\
+`log()`\
+`cat()` `rm()` etc...
+
+## 📦 Paquetes
+
+Otros componentes de R-base:\
+`utils, stats, datasets, graphics, grDevices, grid, methods, tools, parallel, compiler, splines, tcltk, stats4`
+
+Paquetes 'recomendados' (se instalan con R pero no se cargan automáticamente)
+
+`boot, class, cluster, codetools, foreign, KernSmooth, lattice, mgcv, nlme, rpart, survival, MASS, spatial, nnet, Matrix`
+
+## 📦 Paquetes Adicionales
+
+-   \>20,900 en [CRAN](https://cran.r-project.org/) (The Comprehensive R Archive Network)
+
+-   muchos más en GitHub, GitLab, Bitbucket, Bioconductor, etc.
+
+Se instalan desde R con:
+
+`install.packages()` para paquetes de CRAN\
+`remotes` o `pak` para todos los demás repositorios
+
+## Proyectos en RStudio
+
+::: columns
+::: {.column width="35%"}
+![](imgs/rprojects.png)
+:::
+
+::: {.column width="65%"}
+-   Instancia de R dedicada
+
+-   Navegador apuntando al directorio del proyecto
+
+    -   botón para regresar al dir. del proyecto
+
+-   Dir. de proyecto establecido como Dir. de Trabajo
+
+    -   rutas relativas al Dir. de Proyecto
+:::
+:::
+
+## Ejercicio{background-color="#a4c5ff"}
+
+Crear un proyecto para el curso en RStudio 
+
+</br>
+
+- en alguna ubicación fácil de encontrar (ej. Escritorio) 
+- "taller-R-lab" como nombre  
+
+> Los proyectos en OneDrive pueden no funcionar correctamente
+
+## 
+
+![](imgs/ubereats.png){fig-align="center"}
+
+## Guardar la fuente y no el entorno
+
+::: columns
+::: {.column width="50%"}
+<img src="imgs/pancks.png"/>
+:::
+
+::: {.column width="50%"}
+-   Exportar figuras y resultados a archivos
+
+-   Evitar `rm(list = ls())`.
+
+-   'Hoja en blanco' & reiniciar R seguido
+
+::::{.rightref}
+:::{.refbox}
+Jenny Bryan & Jim Hester (2020)\
+[What they forgot to teach you about R](https://rstats.wtf/save-source.html)\
+Jenny Bryan (2018)\
+[Zen And The aRt Of Workflow Maintenance](https://speakerdeck.com/jennybc/zen-and-the-art-of-workflow-maintenance)
+:::
+::::
+
+:::
+:::
+
+## Hoja en blanco (blank slate)
+
+::: columns
+::: {.column width="60%"}
+No se guarda el espacio de trabajo a un archivo _.Rdata_
+
+No se carga el espacio de trabajo desde un archivo _.Rdata_ al arrancar R
+
+:::
+
+::: {.column width="40%"}
+
+![](imgs/clnslt.jpg)
+
+:::
+:::
+
+
+## Reiniciar R
+
+### `Ctrl+Shift+F10`
+(Windows y Linux)
+
+### `Command+Shift+F10`    
+(Mac)
+
+
+# Estructuras de datos
+
+## Principios de programación en R
+
+</br>
+
+Todo lo que existe es un *objeto*
+
+Todo lo que ocurre lo hace una **función**\
+(*Las funciones son objetos*)
+
+Las **funciones** (generalmente) viven en paquetes
+
+## Objetos
+
+-   Tablas con filas y columnas
+
+-   Modelos
+
+-   Listas
+
+-   Gráficos
+
+> Todos los objetos tienen clases y atributos y hay distintas formas de crearlos
+
+## 
+
+::: columns
+::: {.column width="50%"}
+
+### Vectores
+
+![](imgs/vector.png)
+
+### Listas
+
+![](imgs/listhad.png)
+:::
+
+::: {.column width="50%"}
+### Tablas
+
+![](imgs/dataframe.png)
+:::
+:::
+
+
+## Vectores
+
+Números
+
+:::{.big-code}
+```{r}
+c(1,2,3,4)
+```
+:::
+</br>
+
+:::{.big-code}
+```{r}
+c(22.1,0.006,4.1)
+```
+:::
+
+## Vectores
+
+Caracteres
+
+:::{.big-code}
+```{r}
+c("perro","gato","rata","B")
+```
+:::
+
+## Vectores
+
+Lógicos (verdadero/falso)
+
+:::{.big-code}
+```{r}
+c(TRUE,FALSE,FALSE,FALSE,TRUE)
+```
+:::
+---
+
+![](imgs/logical.jpg)
+
+---
+
+![](imgs/logicalNA.jpg)
+
+## Creando objetos
+
+:::{.big-code}
+```{r}
+x <- c(1, 2, 3)
+```
+:::
+
+Función `c()` para juntar elementos en un vector
+
+:::{.med-code}
+```{r}
+x <- c(1,2,3)
+y <- c("a","G","h")
+```
+:::
+
+:::{.med-code}
+```{r}
+x
+y
+```
+:::
+
+
+## Los objetos tienen clases
+
+:::{.big-code}
+```{r}
+#| echo: true
+#| eval: true
+class(x)
+class(y)
+```
+:::
+
+
+## Los vectores solo pueden tener objetos de la misma clase
+
+:::{.big-code}
+```{r}
+c(1,"a",2)
+```
+:::
+
+Al combinar caracteres y números hay conversión automática
+
+
+
+## Dos o más vectores del mismo largo...
+
+</br>
+
+::: columns
+::: {.column width="40%"}
+![](imgs/dataframe.jpg)
+:::
+
+::: {.column width="60%"}
+### ¡Data frame!
+
+- Objeto tabular con filas y columnas
+
+- Puede almacenar objetos de distintas clases en las columnas
+
+- Nombres para cada columna
+:::
+:::
+
+## Data frames
+
+
+Se crean importando un archivo tabular o con `data.frame()`
+
+:::{.med-code}
+```{r}
+#| eval: true
+#| echo: true
+mi_tabla <- 
+data.frame(id=c("rana","pez","nutria","gusano"),
+           ind_g=c(12,15,13,10),
+           listo=c(TRUE,TRUE,FALSE,TRUE))
+
+```
+:::
+
+-   cada vector es una columna
+-   nombres de columnas sin comillas
+-   mismo largo para todos los vectores
+
+## 
+:::{.big-code}
+```{r}
+#| eval: true
+#| echo: true
+mi_tabla
+```
+:::
+
+
+## Importando archivos (tablas)
+
+-   Con el botón "*Import Dataset*"
+-   Con alguna función `read`
+
+
+## `readr` y `readxl`
+
+Paquetes adicionales para importar datos rectangulares desde archivos de texto y hojas de cálculo
+
+-   Menos errores al importar
+
+-   Mayor flexibilidad al leer archivos
+
+-   Lectura más rápida
+
+-   Funciones adicionales para limpiar los valores en las columnas
+
+## Ejercicio{background-color="#a4c5ff"}
+
+Importar una tabla a R desde un archivo
+
+
+# Preparación de datos
+
+## Pipes (\\paips\)
+
+Si queremos hacer varias operaciones en secuencia:
+
+::: {.incremental}
+-   Código anidado (los resultados se evalúan de adentro hacia afuera)
+
+-   Pipes (estructuramos operaciones seriadas de izquierda a derecha)
+
+:::
+
+## Código anidado
+
+</br>
+
+::: {.big-code}
+```{r}
+#| eval: true
+#| echo: true
+
+notas <- c(7,8,8,10,6,9,5,9,8)
+
+round(mean(notas), digits = 2)
+```
+:::
+
+## Pipes 
+
+::: fragment
+::: columns
+::: {.column width="30%"}
+Mano izquiera\
+(LHS)
+:::
+
+::: {.column width="40%"}
+operador 'pipe'
+
+`%>%`\
+de 📦 `magrittr`
+
+`|>` en R v \>= 4.1.0
+:::
+
+::: {.column width="30%"}
+Mano derecha\
+(RHS)
+:::
+:::
+:::
+
+::: fragment
+Toma un objeto a la izquerda del operador y lo inserta como argumento en la función que esté a su derecha
+
+\* Por defecto lo que esté a la izquierda del 'pipe' se inserta como el primer argumento de la función
+:::
+
+## Pipes
+
+-   Reducen la necesidad de guardar resultados intermedios o de anidar código
+
+-   Código más fácil de leer
+
+-   Más fácil quitar o agregar pasos a la secuencia
+
+> Insertamos con `ctrl + shift + M`
+
+::::{.rightref}
+:::{.refbox}
+Adolfo Álvarez (2021)\
+[The (updated) history of the pipe operator in R](http://adolfoalvarez.cl/blog/2021-09-16-plumbers-chains-and-famous-painters-the-history-of-the-pipe-operator-in-r/)
+:::
+::::
+
+------------------------------------------------------------------------
+
+</br>
+
+::: {.big-code}
+```{r}
+#| echo: true
+library(magrittr)
+notas %>% 
+  mean() %>% 
+  round(digits=2)
+```
+:::
+
+------------------------------------------------------------------------
+
+</br>
+
+::: {style="text-align: center"}
+`LHS |> RHS(argument = 12)`
+
+*se convierte en*
+
+`RHS(LHS, argument = 12)`
+:::
+
+
+
+# Funciones y paquetes para preparar, transformar, y estructurar datos
+
+## Funciones útiles de 📦 `dplyr`
+
+-   Funciones separadas para las operaciones más comunes
+
+-   Cada función solo hace una cosa pero la hace bien
+
+</br>
+
+-   Funciones intuitivas para:
+
+    -   Crear subconjuntos de filas y columnas
+
+    -   Crear o modificar columnas
+
+## 
+
+```{r createmegadiv}
+#| echo: false 
+#| eval: true
+
+paises_m <- 
+tibble::tribble(
+        ~pais, ~especies, ~amenazadas,   ~region,
+  "Indonesia",      670L,        191L,    "Asia",
+     "Brasil",      648L,         80L, "America",
+      "China",      551L,         73L,    "Asia",
+     "Mexico",      523L,         96L, "America",
+       "Peru",      467L,         53L, "America",
+      "Congo",      430L,         15L,  "Africa",
+      "India",      412L,         93L,    "Asia",
+      "Kenya",      376L,         30L,  "Africa",
+  "Argentina",      374L,         38L, "America",
+    "Ecuador",      372L,         47L, "America",
+  "Venezuela",      363L,         35L, "America",
+   "Tanzania",      359L,         41L,  "Africa"
+  )
+
+
+
+```
+
+::: panel-tabset
+### Países megadiversos
+
+```{r}
+#| echo: false 
+#| eval: true
+paises_m %>% gt() %>% 
+  tab_style(
+    cell_text(size = '21px'),
+    locations = list(cells_body(),
+                     cells_column_labels(everything()),
+                     cells_title()))
+```
+
+### Datos
+
+```{r}
+#| echo: true
+#| eval: false
+paises_m <- 
+tibble::tribble(
+        ~pais, ~especies, ~amenazadas,   ~region,
+  "Indonesia",      670L,        191L,    "Asia",
+     "Brasil",      648L,         80L, "America",
+      "China",      551L,         73L,    "Asia",
+     "Mexico",      523L,         96L, "America",
+       "Peru",      467L,         53L, "America",
+      "Congo",      430L,         15L,  "Africa",
+      "India",      412L,         93L,    "Asia",
+      "Kenya",      376L,         30L,  "Africa",
+  "Argentina",      374L,         38L, "America",
+    "Ecuador",      372L,         47L, "America",
+  "Venezuela",      363L,         35L, "America",
+   "Tanzania",      359L,         41L,  "Africa"
+  )
+
+```
+:::
+
+## `select()`
+
+::: columns
+::: {.column width="30%"}
+#### Seleccionar columnas
+
+-   por nombre\
+-   por posición\
+-   por tipo\
+:::
+
+::: {.column width="70%"}
+:::{.med-code}
+```{r}
+paises_m %>% 
+  select(pais,
+         amenazadas) %>% 
+  head(4)
+```
+:::
+:::
+:::
+
+## `mutate()`
+
+::: columns
+::: {.column width="35%"}
+#### Crea o modifica columnas
+
+-   Crear nuevas\
+-   'sobre-escribir' existentes\
+:::
+
+::: {.column width="65%"}
+```{r}
+
+paises_m %>%
+  select(pais, amenazadas) %>% 
+  mutate(amenazadas_log = log(amenazadas)) %>% 
+  head(5)
+```
+:::
+:::
+
+
+## `filter()`
+
+
+#### Seleccionar filas
+
+Retiene solamente las filas que cumplen una condición
+
+:::{.med-code}
+```{r}
+paises_m %>% 
+  select(pais, especies, amenazadas) %>% 
+  filter(amenazadas > 75)
+```
+:::
+
+## `rename()`
+
+
+#### Cambiar nombres de columnas
+
+Nombre nuevo primero _luego_ variable objetivo
+
+:::{.med-code}
+```{r}
+paises_m %>% 
+  rename(country=pais,
+         species=especies, threatened=amenazadas) %>% 
+  head(3)
+
+```
+:::
+
+
+## Ejercicio Littorinidae
+
+- Importar el archivo "littorinidae.csv"
+
+- Descartar columnas 
+
+- Crear subconjuntos taxonómicos o geográficos
+
+# `ggplot2`
+
+
+##
+
+> Una gramática puede ayudar a construir oraciones diferentes con una pequeña cantidad de verbos, sustantivos y adjetivos, en lugar de memorizar cada oración específica. Una pequeña cantidad de los componentes básicos de ggplot2 y de su gramática puede crear cientos de gráficos diferentes.
+
+[Introducción a la ciencia de datos](http://rafalab.dfci.harvard.edu/dslibro/)  
+Rafael A. Irizarry (2020)
+
+
+## Gramática de gráficos
+
+![Modificado de Wickham (2007)](imgs/gramaticagrs.png){fig-align="center"}
+
+
+
+##
+
+![](imgs/capas.png)
+
+## 
+
+
+::: {.big-code}
+```{r}
+#| eval: false
+#| echo: true
+ggplot(data, aes(x,y)) +
+  geom_point()
+```
+:::
+
+</br>
+</br>
+`ggplot()` crea el gráfico  
+
+`aes()` determina los vínculos entre las variables y las propiedades del gráfico
+
+`geom_*` define la capa con la representación visual de los datos
+
+------------------------
+
+::: panel-tabset
+
+### lagartijas
+
+```{r}
+#| eval: true
+#| echo: false
+tibble::tribble(
+  ~largo, ~peso,     ~edad,
+      9L,   20L,  "adulto",
+      8L,   13L, "juvenil",
+      7L,   15L, "juvenil",
+     13L,   18L,  "adulto",
+     11L,   21L,  "adulto",
+      6L,   14L, "juvenil"
+  ) %>% gt() %>% 
+    tab_style(
+    cell_text(size = '33px'),
+    locations = list(cells_body(),
+                     cells_column_labels(everything()),
+                     cells_title())) %>% 
+  tab_options(table.background.color="#f4f4f9")
+```
+
+### Datos
+
+```{r}
+#| eval: false
+#| echo: true
+
+lagartijas <- 
+tibble::tribble(
+  ~largo, ~peso,     ~edad,
+      9L,   20L,  "adulto",
+      8L,   13L, "juvenil",
+      7L,   15L, "juvenil",
+     13L,   18L,  "adulto",
+     11L,   21L,  "adulto",
+      6L,   14L, "juvenil"
+  )
+
+```
+:::
+
+----------------
+
+::: columns
+::: {.column width="50%"}
+```{r}
+#| echo: false
+ 
+tibble::tribble(
+  ~largo, ~peso,     ~edad,
+      9L,   20L,  "adulto",
+      8L,   13L, "juvenil",
+      7L,   15L, "juvenil",
+     13L,   18L,  "adulto",
+     11L,   21L,  "adulto",
+      6L,   14L, "juvenil"
+  ) %>% gt() %>% tab_style(
+    cell_text(size = '34px'),
+    locations = list(cells_body(),
+                     cells_column_labels(everything()),
+                     cells_title())) %>% 
+  tab_options(table.background.color="#f4f4f9")
+
+```
+:::
+
+::: {.column width="50%"}
+```{r}
+#| echo: false
+ 
+tibble::tribble(
+   ~x,  ~y,     ~figura,
+   9L, 20L,   "círculo",
+   8L, 13L, "triángulo",
+   7L, 15L, "triángulo",
+  13L, 18L,   "círculo",
+  11L, 21L,   "círculo",
+   6L, 14L, "triángulo"
+  ) %>% gt() %>% tab_style(
+    cell_text(size = '34px'),
+    locations = list(cells_body(),
+                     cells_column_labels(everything()),
+                     cells_title())) %>% 
+  tab_options(table.background.color="#f4f4f9")
+
+```
+:::
+:::
+
+##
+
+```{r}
+#| echo: false
+#| eval: true
+
+lagartijas <- tibble::tribble(
+  ~largo, ~peso,     ~edad,
+      9L,   20L,  "adulto",
+      8L,   13L, "juvenil",
+      7L,   15L, "juvenil",
+     13L,   18L,  "adulto",
+     11L,   21L,  "adulto",
+      6L,   14L, "juvenil"
+  )
+```
+
+
+```{r}
+ggplot(data = lagartijas,     
+  aes(x = largo,y = peso))+
+  geom_point()
+```
+
+
+## Ejercicio 
+
+`ranas.csv`{style="color:orange"}  
+`01_armar-plots.R`{style="color:orange"}  
+
+</br></br></br>
+
+:::{.callout}
+##
+
+Datos sobre tamaño corporal, frecuencia dominante, y hábitat de 176 especies de ranas, tomados de Muñoz et al. [(2020)](https://onlinelibrary.wiley.com/doi/10.1111/jeb.13713)
+:::
+
+
+# Datos espaciales y mapas
+
+
+## Paquete `sf`
+
+
+- "Simple features for R"
+
+- Manejo espacial de puntos, líneas y polígonos
+
+- Métodos propios para graficar (`plot()`)
+
+- Compatible con `ggplot2`
+
+## Mapas base
+
+- Leer cualquier archivo vectorial (shp)
+
+- Cargar datos desde paquetes
+
+## rnaturalearth
+
+- Datos de países, estados, etc. 
+
+- Función `ne_countries` y pedir salida en formato _simple features_
+
+```{r}
+#| eval: false
+
+library(rnaturalearth)
+chl <- ne_countries(country = "Chile", returnclass = "sf")
+plot(chl)
+```
+
+
+## objetos sf
+
+- Función `st_read` para importar archivos, o `st_as_sf` para asignar geometría
+
+- Argumento `coords` para especificar las columnas con datos espaciales (long, lat)
+
+- Argumento `crs` para especificar sistema de coordenadas
+
+
+## Ejercicio {background-color="#a4c5ff"}
+
+- Importar archivo 'littorinidae.csv'
+
+- Filtar datos para un solo género y un solo país (o por latitud/longitud)
+
+- Graficar los puntos de ocurrencia en un mapa
+
+
+
+
+
+
+

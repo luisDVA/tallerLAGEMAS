@@ -1,0 +1,15 @@
+---
+title: "Taller - Introducción a R - \nLAGEMAS"
+---
+
+19/06/2024
+
+###  Presentación
+[Taller R LAGEMAS](presentaciones/miercoles19.qmd){.external target="_blank"}
+
+### Materiales
+
+[️[Descargar datos](ejemplos/ejemplostaller.zip)]{style="font-size: 1.6rem; background-color: #b46294; 	padding: 3px;	border-radius: 6px; text-align: center;"}
+
+
+
